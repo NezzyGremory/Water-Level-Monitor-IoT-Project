@@ -1,0 +1,6 @@
+build/
+.test/
+secrets.h
+*.db
+__pycache__/
+.venv/

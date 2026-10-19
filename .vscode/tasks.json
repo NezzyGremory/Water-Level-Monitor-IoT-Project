@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build firmware",
+      "type": "shell",
+      "command": "bash scripts/build.sh",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Tes level air (Wokwi CLI)",
+      "type": "shell",
+      "command": "bash scripts/test_levels.sh",
+      "problemMatcher": []
+    },
+    {
+      "label": "Jalankan server API",
+      "type": "shell",
+      "command": "uvicorn server:app --host 0.0.0.0 --port 8000",
+      "options": { "cwd": "${workspaceFolder}/server" },
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}
